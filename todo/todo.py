@@ -2,6 +2,7 @@ import typer
 import os
 import configparser
 import subprocess
+import subprocess
 import pkg_resources
 
 from extentions.networking_extentions import is_valid_url, is_network_available
@@ -39,7 +40,8 @@ def setup() -> None:
             return
         else:
             if len(stdout_lines) > 0:
-                print("Podman package have already installed")
+                print("Podman package have alreat"
+                      "dy installed")
             else:
                 print("Podman package not installed yet")
                 print("Will be install immediately")
@@ -50,6 +52,11 @@ def setup() -> None:
     except subprocess.CalledProcessError:
         print("CalledProcessError")
 
+@app.command()
+def measure_performance():
+    filter_lines = []
+    def IOPS():
+        for line  in filter_lines if "/dev" in lin
 
 @app.command()
 def environmentVar():
